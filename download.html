@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+      <style>
+           <style>
+               
+        .container {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+      
+                </sryle>
+          
+   .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+      
+          
+          
+            </style>
+</head>
+<body>
+    
+    <style>
+    
+.heading {
+  color: #007bff; /* Text color */
+  font-size: 24px; /* Font size */
+  font-weight: bold; /* Font weight */
+  text-align: center; /* Text alignment */
+  /* Additional styles */
+}
+   
+    
+    
+    </style>
+    
+ <h1 class="heading">muhammad UsMaN Aijaz Ali RajPUt</h1>
+  
+    
+    
+    
+    <div class="container">
+        <h1>Social Media Downloader</h1>
+        <input type="text" id="urlInput" placeholder="Enter URL">
+        <button onclick="downloadVideo()">Download</button>
+        <div id="downloadLinks"></div>
+    </div>
+    <script>
+   function downloadVideo() {
+    var url = document.getElementById("urlInput").value;
+    var downloadLinks = document.getElementById("downloadLinks");
+    
+    // Clear previous download links
+    downloadLinks.innerHTML = "";
+    
+    // Call functions to generate download links based on the URL
+    generateYouTubeLink(url);
+    // Add more functions for other social media platforms
+    
+}
+
+function generateYouTubeLink(url) {
+    // Extract video ID from YouTube URL
+    var videoId = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+    
+    if (videoId) {
+        // Construct download link
+        var downloadLink = document.createElement("a");
+        downloadLink.href = "https://www.ssyoutube.com/watch?v=" + videoId[1];
+        downloadLink.textContent = "Download YouTube Video";
+        downloadLink.target = "_blank";
+        downloadLinks.appendChild(downloadLink);
+    } else {
+        // URL is not valid YouTube URL
+        console.log("Invalid YouTube URL");
+    }
+}
+
+// Add similar functions for other social media platforms
+    
+         </script>
+         
+         
+ 
+      
+         
+         
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Links</title>
+  <link rel="stylesheet" href="styles.css">
+    <style>
+        
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.facebook {
+  background-color: #3b5998; /* Facebook blue */
+}
+
+.twitter {
+  background-color: #1da1f2; /* Twitter blue */
+}
+
+.instagram {
+  background-color: #c32aa3; /* Instagram pink */
+}
+
+.linkedin {
+  background-color: #0077b5; /* LinkedIn blue */
+}
+
+.youtube {
+  background-color: #ff0000; /* YouTube red */
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+}
+       
+        </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Connect with Us</h1>
+    <div class="social-links">
+      <a href="https://www.facebook.com/" target="_blank" class="facebook">Facebook</a>
+      <a href="https://twitter.com/" target="_blank" class="twitter">Twitter</a>
+      <a href="https://www.instagram.com/" target="_blank" class="instagram">Instagram</a>
+      <a href="https://www.linkedin.com/" target="_blank" class="linkedin">LinkedIn</a>
+      <a href="https://www.youtube.com/" target="_blank" class="youtube">YouTube</a>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Search</title>
+</head>
+<body>
+  <input type="text" id="searchInput" placeholder="playstore">
+  <button onclick="searchApps()">Search</button>
+
+  <div id="searchResults"></div>
+
+  <script>
+      
+      
+  function searchApps() {
+  var searchTerm = document.getElementById("searchInput").value;
+  var searchUrl = "https://play.google.com/store/search?q=" + encodeURIComponent(searchTerm);
+  window.open(searchUrl, "_blank");
+}
+   
+      
+      
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
